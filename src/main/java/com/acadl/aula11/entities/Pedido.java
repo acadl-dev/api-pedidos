@@ -1,5 +1,6 @@
 package com.acadl.aula11.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,5 +13,6 @@ public class Pedido {
 
     @ManyToOne()
     @JoinColumn(name = "cliente_id")
+    @JsonIgnore
     public Cliente cliente;
 }
